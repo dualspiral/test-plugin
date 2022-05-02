@@ -41,7 +41,7 @@ jobs:
           apiKey: ${{ secrets.ORE_KEY }}
           tag: Release
           projectId: "test-plugin"
-          oreUrl: "https://staging-ore.spongepowered.org/"
+          oreUrl: "https://staging-ore.spongeproject.net/"
           createForumPost: false
           verboseLogging: true
       - name: Archive test results
