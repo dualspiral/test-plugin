@@ -43,6 +43,7 @@ jobs:
           projectId: "test-plugin"
           oreUrl: "https://staging-ore.spongepowered.org/"
           createForumPost: false
+          verboseLogging: true
       - name: Archive test results
         if: "${{ always() }}"
         uses: actions/upload-artifact@v2
