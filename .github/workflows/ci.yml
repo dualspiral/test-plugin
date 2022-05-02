@@ -47,7 +47,7 @@ jobs:
           description: desc
           apiKey: ${{ secrets.ORE_KEY }}
           channel: Release
-          projectId: "test-plugin"
+          pluginId: "test-plugin"
           oreUrl: "https://staging-ore.spongeproject.net/"
           createForumPost: false
           verboseLogging: true
