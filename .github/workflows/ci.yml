@@ -23,7 +23,7 @@ jobs:
 
       # Actually build
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew clean build
         env:
           MINOR_VERSION: ${{ github.run_number }}
           PATCH_VERSION: ${{ github.run_attempt }}
