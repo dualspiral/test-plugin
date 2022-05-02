@@ -41,7 +41,7 @@ jobs:
           path: DESC.md
           if-no-files-found: error
       - name: Upload to Ore
-        uses: dualspiral/ore-upload-action@main
+        uses: dualspiral/ore-upload-action@v1
         with:
           plugin: plugin
           description: desc
