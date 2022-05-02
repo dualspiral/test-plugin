@@ -6,8 +6,11 @@ plugins {
     id("org.spongepowered.gradle.plugin") version "2.0.1"
 }
 
-group = "org.spongepowered"
-version = "1.0-SNAPSHOT"
+val minorVersion = System.getenv()["MINOR_VERSION"] ?: "0"
+val patchVersion = System.getenv()["PATCH_VERSION"] ?: "0"
+
+group = "uk.co.drnaylor"
+version = "0.$minorVersion.$patchVersion-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -15,12 +18,12 @@ repositories {
 
 sponge {
     apiVersion("8.0.0")
-    license("CHANGEME")
+    license("MIT")
     loader {
         name(PluginLoaders.JAVA_PLAIN)
-        version("1.0")
+        version("0.$minorVersion.$patchVersion")
     }
-    plugin("example") {
+    plugin("test-plugin") {
         displayName("Example")
         entrypoint("org.spongepowered.example.Example")
         description("Just testing things...")
