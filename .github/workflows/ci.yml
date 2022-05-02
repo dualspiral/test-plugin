@@ -33,11 +33,17 @@ jobs:
           name: plugin
           path: build/libs/sponge-plugin-template-*.jar
           if-no-files-found: error
+      - name: Upload Description
+        uses: actions/upload-artifact@v3
+        with:
+          name: desc
+          path: DESC.md
+          if-no-files-found: error
       - name: Upload to Ore
         uses: dualspiral/ore-upload-action@main
         with:
           plugin: plugin
-          description: "Test description"
+          description: desc
           apiKey: ${{ secrets.ORE_KEY }}
           channel: Release
           projectId: "test-plugin"
